@@ -5,6 +5,8 @@ var SCRIPT_PROP = PropertiesService.getScriptProperties(); // new property servi
 function setup() {
     var doc = SpreadsheetApp.getActiveSpreadsheet();
     SCRIPT_PROP.setProperty("key", doc.getId());
+          doc.setActiveRange(sheet.getRange(1, 1)).setValue(22);
+
 }
 
 function doGet(e){ 
