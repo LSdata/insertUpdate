@@ -111,16 +111,29 @@
           <h2>Error</h2>
           <p>Could not connect to bluetooth device!</p>
         </paper-dialog>
+          
+          <paper-dialog id="printDialog">
+          <h2>Text:</h2>
+          <p id="p_pringingID"></p>
+        </paper-dialog>
+          
       </div>
     </template>
 
      <script>
         'use strict';
+                     alert("alerting script start");
+
+         
         document.addEventListener('WebComponentsReady', () => {
      
             let connectToggle = document.querySelector('#connect');
             let progress = document.querySelector('#progress');
             let dialog = document.querySelector('#errorDialog');
+            let dialogPrint = document.querySelector('#printDialog');
+            
+            alert("alerting addEventListener");
+
             let gattServer;
             
             let commandService;
