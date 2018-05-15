@@ -118,8 +118,6 @@
      <script>
         'use strict';
         document.addEventListener('WebComponentsReady', () => {
-            alert("alerting addEventListener");
-
             let connectToggle = document.querySelector('#connect');
             let progress = document.querySelector('#progress');
             let dialog = document.querySelector('#errorDialog');
@@ -165,8 +163,6 @@
             }
         
             function handleCharacteristicValueChanged1(event) {
-                alert(" a handleCharacteristicValueChanged1");
-
                 //Button A
                 let value = event.target.value;
                 let a = [];
@@ -209,6 +205,8 @@
                 request.done(function (response, textStatus, jqXHR){
                     // log a message to the console
                     console.log("Hooray, it worked!");
+                    alert("Hooray, it worked!");
+
                 });
     
                 // callback handler that will be called on failure
@@ -218,6 +216,8 @@
                         "The following error occured: "+
                         textStatus, errorThrown
                     );
+                    alert("The following error occured: "+textStatus);
+                    
                 });
             }
             /**
