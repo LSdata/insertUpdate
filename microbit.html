@@ -190,14 +190,14 @@
             function updateGoogleSheets() {                
                 var gattID = JSON.stringify(gattServer.device.id);
                 var gattName = JSON.stringify(gattServer.device.name);
-                var blub = "blub txt";
+                let blub = 'blub txt';
                 //let serializedData = 'id=' + gattID + '&name=' + gattName;
                 //let serializedData = 'id=' + gattServer.device.id + '&name=' + gattServer.device.name;
                 let request = $.ajax({
                     url: "https://script.google.com/macros/s/AKfycbz8gG4TfuVJhkUebJdVXZNugAr-2sLtt9z5AoP_nRoKVwYw7i0/exec",
                     type: "post",
                     //data: serializedData
-                    data: JSON.stringify(blub)
+                    data: blub
                 });
     
                 // callback handler that will be called on success
