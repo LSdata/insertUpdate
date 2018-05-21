@@ -1,6 +1,3 @@
-
-
-
 <html>
 <head>
     <title>BBC micro:bit update Google Sheets</title>
@@ -193,17 +190,14 @@
             function updateGoogleSheets() {                
                 var gattID = JSON.stringify(gattServer.device.id);
                 var gattName = JSON.stringify(gattServer.device.name);
-                //var blub = JSON.stringify("blub");
-                var blub = "blub txt";
-
+                var blub = JSON.stringify("blub");
                 //let serializedData = 'id=' + gattID + '&name=' + gattName;
                 //let serializedData = 'id=' + gattServer.device.id + '&name=' + gattServer.device.name;
                 let request = $.ajax({
                     url: "https://script.google.com/macros/s/AKfycbz8gG4TfuVJhkUebJdVXZNugAr-2sLtt9z5AoP_nRoKVwYw7i0/exec",
                     type: "post",
                     //data: serializedData
-                    data: var blub = JSON.stringify(blub);
-
+                    data: blub
                 });
     
                 // callback handler that will be called on success
@@ -211,7 +205,6 @@
                     // log a message to the console
                     console.log("Hooray, it worked!");
                     alert("Hooray, it worked! serializedData is:"+serializedData+". respons obj:"+JSON.stringify(response));
-
                 });
     
                 // callback handler that will be called on failure
